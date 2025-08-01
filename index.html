@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+<body>
+  <main class="container">
+    <!-- Background patterns -->
+    <div class="bg-pattern"></div>
+    <div class="circles-pattern"></div>
+
+    <!-- Header -->
+    <header class="header">
+      <h1 class="header__title">Simple, traffic-based pricing</h1>
+      <p class="header__subtitle">Sign-up for our 30-day trial. No credit card required.</p>
+    </header>
+
+    <!-- Pricing Card -->
+    <div class="pricing-card">
+      <!-- Top Section -->
+      <div class="pricing-section">
+        <div class="pricing-info">
+          <span class="pageviews">100K pageviews</span>
+          <div class="price-display">
+            <span class="price">$16.00</span>
+            <span class="period">/ month</span>
+          </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="slider-container">
+          <input type="range" class="slider" id="priceSlider" min="0" max="4" value="2" step="1">
+        </div>
+
+        <!-- Billing Toggle -->
+        <div class="billing-toggle">
+          <span class="billing-option">Monthly Billing</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="billingToggle">
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="billing-option">Yearly Billing</span>
+          <span class="discount-badge">25% discount</span>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="bottom-section">
+        <div class="features-section">
+          <ul class="features-list">
+            <li class="feature-item">
+              <img src="./images/icon-check.svg" alt="Check" class="check-icon">
+              Unlimited websites
+            </li>
+            <li class="feature-item">
+              <img src="./images/icon-check.svg" alt="Check" class="check-icon">
+              100% data ownership
+            </li>
+            <li class="feature-item">
+              <img src="./images/icon-check.svg" alt="Check" class="check-icon">
+              Email reports
+            </li>
+          </ul>
+        </div>
+
+        <div class="cta-section">
+          <button class="cta-button">Start my trial</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Ayokanmi Adejola</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

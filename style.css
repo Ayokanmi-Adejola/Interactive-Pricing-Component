@@ -1,0 +1,398 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  background-color: hsl(230, 100%, 99%);
+  color: hsl(225, 20%, 60%);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Background patterns */
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50vh;
+  background-image: url('./images/bg-pattern.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  z-index: -2;
+}
+
+.circles-pattern {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  width: 146px;
+  height: 145px;
+  background-image: url('./images/pattern-circles.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  z-index: 1;
+}
+
+.header__title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: hsl(227, 35%, 25%);
+  margin-bottom: 0.75rem;
+}
+
+.header__subtitle {
+  font-size: 15px;
+  font-weight: 600;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Pricing Card */
+.pricing-card {
+  background: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 540px;
+  overflow: hidden;
+}
+
+/* Pricing Section */
+.pricing-section {
+  padding: 2.5rem 3rem 2rem;
+  text-align: center;
+}
+
+.pricing-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.pageviews {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: hsl(225, 20%, 60%);
+}
+
+.price-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: hsl(227, 35%, 25%);
+}
+
+.period {
+  font-size: 16px;
+  font-weight: 600;
+  color: hsl(225, 20%, 60%);
+}
+
+/* Slider */
+.slider-container {
+  margin-bottom: 2.5rem;
+}
+
+.slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: hsl(224, 65%, 95%);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: hsl(174, 86%, 45%);
+  cursor: pointer;
+  box-shadow: 0 15px 30px rgba(0, 255, 231, 0.6);
+  background-image: url('./images/icon-slider.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background-color: hsl(174, 77%, 80%);
+  transform: scale(1.1);
+}
+
+.slider::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: hsl(174, 86%, 45%);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 15px 30px rgba(0, 255, 231, 0.6);
+  background-image: url('./images/icon-slider.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.slider::-moz-range-thumb:hover {
+  background-color: hsl(174, 77%, 80%);
+  transform: scale(1.1);
+}
+
+/* Billing Toggle */
+.billing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.billing-option {
+  color: hsl(225, 20%, 60%);
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 22px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(223, 50%, 87%);
+  transition: 0.3s;
+  border-radius: 22px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: hsl(174, 86%, 45%);
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(21px);
+}
+
+.toggle-slider:hover {
+  background-color: hsl(174, 77%, 80%);
+}
+
+.discount-badge {
+  background-color: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+  padding: 0.25rem 0.5rem;
+  border-radius: 9px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* Bottom Section */
+.bottom-section {
+  border-top: 1px solid hsl(224, 65%, 95%);
+  padding: 2rem 3rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Features Section */
+.features-section {
+  text-align: left;
+}
+
+.features-list {
+  list-style: none;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 12px;
+  font-weight: 600;
+  color: hsl(225, 20%, 60%);
+}
+
+.feature-item:last-child {
+  margin-bottom: 0;
+}
+
+.check-icon {
+  width: 9px;
+  height: 8px;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+}
+
+.cta-button {
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(226, 100%, 87%);
+  border: none;
+  padding: 0.75rem 3rem;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Attribution */
+.attribution {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  font-size: 11px;
+  text-align: center;
+  z-index: 10;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .circles-pattern {
+    top: 2rem;
+    right: 1rem;
+    width: 100px;
+    height: 100px;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+
+  .header__title {
+    font-size: 1.25rem;
+  }
+
+  .header__subtitle {
+    font-size: 13px;
+  }
+
+  .pricing-section {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .pricing-info {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+
+  .billing-toggle {
+    font-size: 11px;
+    gap: 0.75rem;
+  }
+
+  .discount-badge {
+    font-size: 9px;
+  }
+
+  .bottom-section {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .features-section {
+    text-align: center;
+  }
+
+  .feature-item {
+    font-size: 11px;
+    justify-content: center;
+  }
+
+  .cta-button {
+    padding: 0.75rem 2.5rem;
+    font-size: 11px;
+  }
+}
