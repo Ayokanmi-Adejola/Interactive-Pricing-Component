@@ -239,4 +239,4 @@ function updateSliderBackground() {
 - **Frontend Mentor** for providing the design challenge and specifications
 - **Google Fonts** for the beautiful Manrope typography
 - **The Frontend Community** for inspiration and best practices
-- **MDN Web Docs** for comprehensive web development documentation# Interactive-Pricing-Component
+- **MDN Web Docs** for comprehensive web development documentation
