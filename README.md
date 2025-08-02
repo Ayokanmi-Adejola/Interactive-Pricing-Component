@@ -1,6 +1,6 @@
 # Interactive Pricing Component
 
-A modern, responsive pricing component built with vanilla HTML, CSS, and JavaScript. This project features an interactive slider for selecting page view tiers and a toggle for monthly/yearly billing with dynamic pricing calculations.
+A modern, responsive pricing component built with vanilla HTML, CSS, and JavaScript. This project features an interactive slider for selecting page view tiers and a toggle for monthly/yearly billing with dynamic pricing calculations
 
 ![Design preview for the Interactive pricing component](./design/desktop-preview.jpg)
 
